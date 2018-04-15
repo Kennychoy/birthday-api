@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About ur b-day</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+<style>
+@media screen and (min-width: 1200px) {
+	body, html {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		background: #6f94dc;
+		position: relative;
+	}
+
+	#container {
+		background: #4675d2;
+		color: white;
+		border: 2px solid black;
+		border-radius: 10px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 60%;
+		height: 60%;
+		transform: translate(-50%, -50%);
+		box-shadow: 5px 10px black;
+		text-align: center;
+		font-family: 'Rammetto One', cursive;
+	}
+	
+	#title, #input-field, #result {
+		padding: 20px;
+	}
+	
+	#title {
+		font-size: 3rem;
+	}
+	
+	#month, #day {
+		width: 15%;
+		border-radius: 5px;
+		padding: .5%;
+	}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+	body, html {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		background: #6f94dc;
+		position: relative;
+	}
+
+	#container {
+		background: #4675d2;
+		color: white;
+		border: 2px solid black;
+		border-radius: 10px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 70%;
+		height: 70%;
+		transform: translate(-50%, -50%);
+		box-shadow: 5px 10px black;
+		text-align: center;
+		font-family: 'Rammetto One', cursive;
+	}
+	
+	#title, #input-field, #result {
+		padding: 20px;
+	}
+	
+	#title {
+		font-size: 2.2rem;
+	}
+	
+	#month, #day {
+		width: 15%;
+		border-radius: 5px;
+		padding: .5%;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+	body, html {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		background: #6f94dc;
+		position: relative;
+	}
+
+	#container {
+		background: #4675d2;
+		color: white;
+		border: 2px solid black;
+		border-radius: 10px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 70%;
+		height: 70%;
+		transform: translate(-50%, -50%);
+		box-shadow: 5px 10px black;
+		text-align: center;
+		font-family: 'Rammetto One', cursive;
+	}
+	
+	#title, #input-field, #result {
+		padding: 15px;
+	}
+	
+	#title {
+		font-size: 1.8rem;
+	}
+	
+	#month, #day {
+		width: 15%;
+		border-radius: 5px;
+		padding: .5%;
+	}
+	
+	#result {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 767px){
+	body, html {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		background: #6f94dc;
+		position: relative;
+	}
+
+	#container {
+		background: #4675d2;
+		color: white;
+		border: 2px solid black;
+		border-radius: 8px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 70%;
+		height: 70%;
+		transform: translate(-50%, -50%);
+		box-shadow: 5px 10px black;
+		text-align: center;
+		font-family: 'Rammetto One', cursive;
+	}
+	
+	#title, #input-field, #result {
+		padding: 12px;
+	}
+	
+	#title {
+		font-size: 1.3rem;
+	}
+	
+	#month, #day {
+		width: 20%;
+		border-radius: 5px;
+		padding: .5%;
+	}
+	
+	#result {
+		font-size: 1.1rem;
+	}
+}
+
+@media screen and (max-width: 499px){
+	body, html {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		background: #6f94dc;
+		position: relative;
+	}
+
+	#container {
+		background: #4675d2;
+		color: white;
+		border: 2px solid black;
+		border-radius: 8px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 90%;
+		height: 90%;
+		transform: translate(-50%, -50%);
+		box-shadow: 5px 10px black;
+		text-align: center;
+		font-family: 'Rammetto One', cursive;
+	}
+	
+	#title, #input-field, #result {
+		padding: 12px;
+	}
+	
+	#title {
+		font-size: 1.2rem;
+	}
+	
+	label {
+		font-size: 1rem;
+	}
+	
+	#month, #day {
+		width: 30%;
+		border-radius: 5px;
+		padding: .5%;
+	}
+	
+	#result {
+		font-size: .85rem;
+	}
+}
+</style>
+</head>
+<body>
+
+<div id="container">
+	<div id="title">What happened on your birthday?</div>
+	<div id="input-field">
+		<div id="monthDiv">
+			<label>Month</label>
+			<select id="month">
+				<option value=1>Jan</option>
+				<option value=2>Feb</option>
+				<option value=3>Mar</option>
+				<option value=4>Apr</option>
+				<option value=5>May</option>
+				<option value=6>Jun</option>
+				<option value=7>Jul</option>
+				<option value=8>Aug</option>
+				<option value=9>Sep</option>
+				<option value=10>Oct</option>
+				<option value=11>Nov</option>
+				<option value=12>Dec</option>
+			</select>
+		</div>
+		<div id="dayDiv">
+			<label>Day</label>
+			<select id="day"></select>
+		</div>
+	</div>
+	<div id="result"></div>
+</div>
+
+<script>
+let monthSelect = document.querySelector("#month");
+let daySelect = document.querySelector("#day");
+let daysCount = {
+	1: 31,
+	2: 29,
+	3: 31,
+	4: 30,
+	5: 31,
+	6: 30,
+	7: 31,
+	8: 31,
+	9: 30,
+	10: 31,
+	11: 30,
+	12: 31
+}
+
+var checkDays = function(){
+	for(let i=1; i<daysCount[month.value] + 1; i++){
+		daySelect.innerHTML += `<option value=${i}>${i}</option>`;
+	}	
+}
+
+var getData = function(){
+	let day = daySelect.value;
+	if(day.length == 1) {day = 0+day}
+	fetch(`http://numbersapi.com/${month.value}/${day}/date`)
+	.then(response => response.text())
+	.then(data => document.querySelector('#result').innerHTML = data)
+	.catch( e => document.querySelector('#result').innerHTML = e)
+}
+
+window.onload = function(){
+	checkDays();
+	getData();
+}
+
+monthSelect.addEventListener("change", checkDays);
+monthSelect.addEventListener("change", getData);
+daySelect.addEventListener("change", getData);
+</script>
+</body>
+</html>
